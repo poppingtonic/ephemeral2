@@ -67,7 +67,7 @@ function wantContent(socket, hash, elem) {
   });
 
   chan.join().receive("ok", () => {
-    webConsole.log("Listening for content for hash ${hash}");
+    webConsole.log(`Listening for content for hash ${hash}`);
 
     requestContentInterval = setInterval(() =>{
       webConsole.log("Requesting content.");
