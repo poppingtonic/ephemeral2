@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let homePageElement = document.getElementById("create-new-page");
   let showPageElement = document.getElementById("content-goes-here");
 
-  webConsole.log("Connecting to websocket.");
+  webConsole.log("Enchanting visitors...");
   let socket = new Socket("/ws");
   socket.connect();
 
   let chan = socket.chan("all", {});
-  chan.join().receive("ok", () => { webConsole.log("Connected!") });
+  chan.join().receive("ok", () => { webConsole.log("Enchantment successful! Their attention is now ours.") });
 
   if ( homePageElement ) {
     homePageElement.addEventListener("click", () => {
@@ -67,7 +67,7 @@ function wantContent(socket, hash, elem) {
   });
 
   chan.join().receive("ok", () => {
-    webConsole.log(`Listening for content for hash ${hash}`);
+    webConsole.log("Listening for content for hash ${hash}");
 
     requestContentInterval = setInterval(() =>{
       webConsole.log("Requesting content.");
