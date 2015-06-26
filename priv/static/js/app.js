@@ -188,7 +188,7 @@
   globals.require.list = list;
   globals.require.brunch = true;
 })();
-require.define({ phoenix: function (exports, require, module) {
+require.define({ phoenix: function phoenix(exports, require, module) {
     "use strict";
 
     var _prototypeProperties = function _prototypeProperties(child, staticProps, instanceProps) {
@@ -1174,9 +1174,7 @@ require.define({ phoenix: function (exports, require, module) {
 if (typeof window === "object" && !window.Phoenix) {
   window.Phoenix = require("phoenix");
 };
-/*! Brunch !*/"use strict";
-
-/**
+/*! Brunch !*//**
 *
 *  Secure Hash Algorithm (SHA256)
 *  http://www.webtoolkit.info/
@@ -1184,6 +1182,8 @@ if (typeof window === "object" && !window.Phoenix) {
 *  Original code by Angel Marin, Paul Johnston.
 *
 **/
+"use strict";
+
 function SHA256(s) {
 
     var chrsz = 8;
